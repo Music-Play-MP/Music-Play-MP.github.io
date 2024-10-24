@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset='utf-8'>
+       <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+       <title>Music Play</title>
+       <meta name='viewport' content='width=device-width, initial-scale=1'>
+       <link rel='stylesheet' href='/styles/styles.css'>
+       <link rel="icon" href="/img/user-music.png">
+</head>
+<body>
+       <header>
+              <h1 class="titulo">Music Play</h1>
+              <nav>
+                     <ul>
+                        <li class="izquierda"><a href="/inicio.html">Inicio</a></li>
+                        <li class="derecha"><a href="/url/reproduce.html">Reproduce</a></li>
+                     </ul>
+              </nav>
+       </header>
+       <div class="container-items">
+              <div class="items">
+                  <figure>
+                      <img src="/img/rock sin fondo.png" alt="Musica" style="height: 40vh; width: 100%;">
+                  </figure>
+                  <div class="info-product">
+                      <h2>Rock</h2>
+                      <button class="reproduce" data-url="rock.html">Reproduce</button>
+                  </div>
+              </div>
+              <div class="items">
+                     <figure>
+                         <img src="/img/rap sin fondo.png" alt="Musica" style="height: 40vh; width: 100%;">
+                     </figure>
+                     <div class="info-product">
+                         <h2>Rap</h2>
+                         <button class="reproduce" data-url="rap.html">Reproduce</button>
+                     </div>
+              </div>
+              <div class="items">
+                     <figure>
+                         <img src="/img/reggaeton sin fondo.png" alt="Musica" style="height: 40vh; width: 100%;">
+                     </figure>
+                     <div class="info-product">
+                         <h2>Reggaeton</h2>
+                         <button class="reproduce" data-url="reggaeton.html">Reproduce</button>
+                     </div>
+              </div>
+              <div class="items">
+                     <figure>
+                         <img src="/img/clasica sin fondo.png" alt="Musica" style="height: 40vh; width: 100%;">
+                     </figure>
+                     <div class="info-product">
+                         <h2>Música Clásica</h2>
+                         <button class="reproduce" data-url="clasica.html">Reproduce</button>
+                     </div>
+              </div>
+       </div>
+       <footer>
+            <p><a href="/url/contacto.html" class="contacto">Contactanos</a></p>
+            <p>Music Play</p>
+            <p>&copy; Universidad de Managua, 2024</p>
+       </footer>
+
+       <script>
+           // Selecciona todos los botones con la clase "reproduce"
+           const buttons = document.querySelectorAll('.reproduce');
+
+           // Agrega un evento de clic a cada botón
+           buttons.forEach(button => {
+               button.addEventListener('click', function() {
+                   const url = this.getAttribute('data-url'); // Obtiene la URL desde el atributo data-url
+                   window.location.href = url; // Redirige a la URL correspondiente
+               });
+           });
+       </script>
+</body>
+</html>

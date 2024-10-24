@@ -1,0 +1,184 @@
+* {
+       box-sizing: border-box;
+}
+
+:root {
+       --color1: #dabbe0;
+       --color2: #eebfd1;
+       --color3: #ecaac2;
+       --color4: #bed1e3;
+       --color5: #93aeca;
+       --negro: black;
+}
+
+body {
+       background-color: var(--color5);
+       font-family: Georgia, serif;
+       margin: 0;
+       padding: 0;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+}
+   
+header {
+       background-color: var(--color4);
+       color:black;
+       padding: 10px 20px;
+       border-radius: 20px;
+       margin: 20px;
+       text-align: center;
+
+}
+   
+nav ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+       display: flex;
+       justify-content: space-between; /* Para alinear "Inicio", el título y "Reproduce" */
+       align-items: center;
+}
+   
+nav ul li {
+       padding: 10px;
+}
+   
+nav ul li a {
+       color: var(--negro);
+       text-decoration: none;
+       font-size: 3vh;
+       padding: 10px;
+}
+   
+nav ul li a:hover {
+       background-color: var(--color2);
+       border-radius: 20px;
+}
+   
+.titulo {
+       flex-grow: 1; /* Hace que el título ocupe el espacio entre los dos enlaces */
+       text-align: center;
+       font-weight: bold;
+       font-size: 3vh;
+}
+   
+.izquierda {
+       align-self: flex-start;
+}
+   
+.derecha {
+       align-self: flex-end;
+}
+
+footer {
+       height: 15vh;
+       background-color: var(--color4);
+       border-radius: 20px;
+       margin: 20px;
+       /*position: relative; /* Cambiado de fixed a relative 
+       width: calc(100% - 40px);  Ajustamos el ancho restando los márgenes */
+       text-align: center;
+}
+
+.contacto {
+       padding: 10px;
+       font-size: 2vh;
+       color: var(--negro); /* Asegúrate de que esto sea negro */
+       text-decoration: none; /* Para quitar el subrayado */
+}
+
+footer .contacto:hover{
+       background-color: var(--color2);
+       border-radius: 20px;
+}
+
+
+main p{
+       text-align: center;
+       font-size: 3vh;
+}
+
+/*Contacto*/
+
+.form-container {
+       background-color: var(--color1); /* Color de fondo del formulario */
+       padding: 20px;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       width: 300px; /* Ancho del formulario */
+}
+   
+h2 {
+       text-align: center; /* Centrar el título */
+       color: var(--negro); /* Color del título */
+}
+   
+.form-group {
+       margin-bottom: 15px; /* Espacio entre los grupos de formulario */
+}
+   
+label {
+       display: block; /* Hacer que las etiquetas ocupen todo el ancho */
+       margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+       color: #333; /* Color de las etiquetas */
+}
+   
+input, textarea {
+       width: 100%; /* Ancho completo */
+       padding: 10px; /* Espacio interno */
+       border: 1px solid var(--negro); /* Borde */
+       border-radius: 5px; /* Esquinas redondeadas */
+       box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+   
+button {
+       width: 100%; /* Ancho completo del botón */
+       padding: 10px; /* Espacio interno */
+       background-color: var(--color4); /* Color de fondo del botón */
+       color: var(--negro); /* Color del texto */
+       border: none; /* Sin borde */
+       border-radius: 5px; /* Esquinas redondeadas */
+       cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+   
+button:hover {
+       background-color: var(--color3); /* Color de fondo al pasar el mouse */
+}
+
+/*Reproduce*/
+
+.container-items {
+       display: flex;
+       flex-wrap: wrap 1fr;
+       justify-content: center;
+       padding: 20px;
+}
+     
+.items {
+       width: 30%;
+       margin: 10px;
+       background-color: var(--color1);
+       padding: 10px;
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+       border-radius: 5px;
+       overflow: hidden;
+       transition: 0.3s;
+}
+     
+.items:hover {
+       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+       transform: translateY(-5px);
+}
+     
+.info-product {
+       padding: 10px;
+       text-align: center;
+       clear: both;
+}
+
+.p1{
+       padding: 20px;
+       margin: 20px;
+       border-radius: 20px;
+}
